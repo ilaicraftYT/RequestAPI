@@ -1,5 +1,5 @@
 {
-  "name": "RequestAPI",
+  "name": "requestapi",
   "version": "1.0.0",
   "description": "Haz peticiones a diversas APIs facilmente",
   "main": "index.js",
