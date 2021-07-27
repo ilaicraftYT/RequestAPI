@@ -1,6 +1,6 @@
 {
   "name": "reqapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Haz peticiones a diversas APIs facilmente",
   "main": "index.js",
   "scripts": {
