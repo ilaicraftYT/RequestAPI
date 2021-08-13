@@ -12,7 +12,7 @@ npm i reqapi
 
 ## Uso
 
-** Advertencia **
+**Advertencia**
 > Ahora RequestAPI usa promesas, ahora se necesitara usar async y await, ahora bien, en lugar de logear la response completa, ahora se podran pedir propiedades
 
 Para usar este paquete debemos usar await y async,primero que todo se necesita requerir el paquete, a continuacion se mostrara un ejemplo simple:
@@ -35,7 +35,7 @@ console.log(datos.category);
 
 Ahora en vez de retornar toda la respuesta, requerimos algo en especifico, un poco  menos simple, mas rapido.
 
-Si quieres saber todas las opciones disponibles para este paquete te recomiendo que le heches un vistaso al codigo del proyecto, o puedes ver algunso ejemplos de uso aqui mismo.
+Si quiere saber todas las opciones disponibles para este paquete te recomiendo que le heches un vistaso al codigo del proyecto, altamente le recomiendi que tambien lea las docs de las APIs o puedes ver algunos ejemplos de uso aqui mismo.
 
 ### Ejemplos de uso
 
@@ -71,10 +71,11 @@ let datos = api.tovadeAPI("covid")
 ```
 **Parametros**
 1. Route, a buscar / String
-  - covid
+  - covid 
+  - quote
 
 ## Contribuciones
-Pull Requests son bienvenidos. Para cambios mayores en la estructura del codigo, asegurate
+Las Pull Requests son bienvenidos. Para cambios mayores en la estructura del codigo, asegurate
 de documentar bien.
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
