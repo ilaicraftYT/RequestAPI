@@ -1,10 +1,10 @@
 # RequestAPI
 
-RequestAPI es un module de NodeJS el cual te ayudara a hacer peticiones a diferentes APIs
+RequestAPI es un modulo de NodeJS basado en promesas el cual te ayudara a hacer peticiones a diferentes APIs
 
 ## Instalacion
 
-Usa  [NPM](https://npmjs.com/package/npm) para instalar RequestAPI.
+Usa [NPM](https://npmjs.com/package/npm) para instalar RequestAPI.
 
 ```bash
 npm i reqapi
@@ -12,70 +12,61 @@ npm i reqapi
 
 ## Uso
 
-**Advertencia**
-> Ahora RequestAPI usa promesas, ahora se necesitara usar async y await, ahora bien, en lugar de logear la response completa, ahora se podran pedir propiedades
+RequestAPI es "promise based" o basado en promesas, por lo tanto, se necesita el uso de `async` y `await`.
 
-Para usar este paquete debemos usar await y async,primero que todo se necesita requerir el paquete, a continuacion se mostrara un ejemplo simple:
+Un ejemplo simple:
 
 ```js
-const api = require("reqapi")
+const reqapi = require("reqapi")
 
-const prueba = async() => {
-let datos = await api.jokeAPI("en", true)
-console.log(datos);
+const broma = async() => {
+  let datos = await reqapi.jokeAPI("en", true)
+  console.log(datos)
 }
 
-prueba()
+broma()
 ```
-Esto hara un log de la respuesta completa, pues no le pedimos una propiedad en especifico, ahora bien, si queremos pedir una propiedad en especifico debemos cambiar el console.log
+
+Datos retorna una promesa con la respectiva informacion, podemos pedirle cierta informacion concreta y que solo devuelva esta, cambiando el console.log para que sea console.log(<datos>.<informacion>)
 
 ```js
-console.log(datos.category);
+console.log(datos.category)
 ```
+Tome nota, la "informacion concreta" varia segun la API al que se le esta haciendo un pedido, a continuacion se mostrara todas las opciones posibles con RequestAPI y la documentacion de la API respectiva.
 
-Ahora en vez de retornar toda la respuesta, requerimos algo en especifico, un poco  menos simple, mas rapido.
-
-Si quiere saber todas las opciones disponibles para este paquete te recomiendo que le heches un vistaso al codigo del proyecto, altamente le recomiendi que tambien lea las docs de las APIs o puedes ver algunos ejemplos de uso aqui mismo.
-
-### Ejemplos de uso
-
-Estos ejemplos tienen una estructura "confirmada" de que funcionan asi, sin embargo puedes usarla a tu gusto:
-
-```js
-const api = require("reqapi");
-
-const funcion = async() => {
-// Ejemplo...
-console.log(datos)
-}
-```
+### Metodos
 
 #### JokeAPI
 
 ```js
-let datos = api.jokeAPI("es", true);
+await reqapi.jokeAPI("en", true)
 ```
 **Parametros**
-1. Lenguaje / String
- - es
- - en
- - fr
-2. Prender o apagar Family Friendly / Boolean
- - true
- - false
+1. Lenguaje | String
+ > es
+ > en 
+ > fr
+2. Family Friendly Switch | Boolean
+ > true
+ > false
 
-#### TovadeAPI
+**Documentacion:** https://v2.jokeapi.dev
+
+#### tovadeAPI
 
 ```js
-let datos = api.tovadeAPI("covid")
+await reqapi.tovadeAPi("covid")
 ```
+
 **Parametros**
-1. Route, a buscar / String
-  - covid 
-  - quote
+1. Route / a buscar / Nombre de la utilidad | String
+ > covid
+ > quote
+
+**Documentacion:** https://api.tovade.xyz/docs/
 
 ## Contribuciones
-Las Pull Requests son bienvenidos. Para cambios mayores en la estructura del codigo, asegurate
+Las Pull Requests son bienvenidas. Para cambios mayores en la estructura del codigo, asegurate
 de documentar bien.
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
