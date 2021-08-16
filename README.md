@@ -27,7 +27,7 @@ const broma = async() => {
 broma()
 ```
 
-Datos retorna una promesa con la respectiva informacion, podemos pedirle cierta informacion concreta y que solo devuelva esta, cambiando el console.log para que sea console.log(<datos>.<informacion>)
+Datos retorna una promesa con la respectiva informacion, podemos pedirle cierta informacion concreta y que solo devuelva esta, cambiando el console.log para que sea `console.log(<datos>.<informacion>)`
 
 ```js
 console.log(datos.category)
